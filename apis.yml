@@ -1,7 +1,28 @@
 aid: viralgains
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/viralgains.png
 name: ViralGains
-description: ViralGains is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  ViralGains is an advertising technology platform that collects consumer
+  feedback directly within digital ad units as zero-party data, then combines
+  that real-time, consented consumer input with its VoiceAlike AI to build
+  higher-quality audiences and deliver more relevant, privacy-respecting
+  advertising for brands and agencies. The platform spans zero-party data
+  collection, brand lift measurement, and a dedicated health and pharma
+  offering (VG Health). ViralGains was surfaced as a portfolio company of
+  500 Global and added to the API Evangelist network. As of this enrichment
+  pass the company publishes a marketing and product website but no public
+  developer program, API documentation, or machine-readable API surface.
 url: https://raw.githubusercontent.com/api-evangelist/viralgains/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +32,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Advertising
+- AdTech
+- Zero-Party Data
+- Marketing
+- Brand Lift
+- Consumer Insights
+- Health and Pharma
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +49,18 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/viralgains-domain-security.yml
 - type: Website
   url: https://viralgains.com
+- type: Blog
+  url: https://www.viralgains.com/resources/press-blog/
+- type: PrivacyPolicy
+  url: https://www.viralgains.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.viralgains.com/terms-conditions/
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
