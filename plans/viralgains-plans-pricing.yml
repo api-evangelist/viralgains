@@ -1,0 +1,19 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  https://www.viralgains.com/page-sitemap.xml (full page inventory),
+  https://www.viralgains.com/pricing (HTTP 404),
+  https://www.viralgains.com/resources/viralgains-faq/
+plan_count: 0
+plans: []
+note: >-
+  ViralGains publishes no pricing page and no plans of any kind. /pricing
+  returns HTTP 404, and the complete Yoast page sitemap (41 URLs) contains no
+  pricing, plans, packages or rate-card page. The FAQ routes all commercial and
+  implementation questions to a sales conversation — phone 800-501-2763, email
+  hello@viralgains.com, and the /contact-us/ form. Media is bought
+  programmatically through DSPs, SSPs and curated PMPs rather than through a
+  published self-serve tier, so there is no rate card to capture. This is a
+  recorded absence, not an unchecked field.
+model: sales-negotiated
+signup: none-published

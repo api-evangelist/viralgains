@@ -1,0 +1,16 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  https://www.viralgains.com/page-sitemap.xml (full page inventory),
+  https://www.viralgains.com/resources/viralgains-faq/,
+  https://www.viralgains.com/platform/
+limit_count: 0
+rate_limits: []
+note: >-
+  There is nothing to rate-limit. ViralGains publishes no API, no developer
+  documentation and no API host (api.viralgains.com, developer.viralgains.com,
+  docs.viralgains.com and developers.viralgains.com are all NXDOMAIN), so no
+  quota, throttle, burst, window or exhaustion status code is documented and no
+  X-RateLimit-*, RateLimit-* or Retry-After header could be observed on a live
+  response. Recorded as an honest zero.
+response_headers: []

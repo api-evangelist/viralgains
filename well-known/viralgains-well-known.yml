@@ -1,0 +1,86 @@
+generated: '2026-08-12'
+method: probed
+source: live HTTPS probes of the only reachable ViralGains host
+host: https://www.viralgains.com
+note: >-
+  ViralGains resolves only its WordPress marketing host. api.viralgains.com,
+  developer.viralgains.com, docs.viralgains.com and developers.viralgains.com
+  are all NXDOMAIN, so there is no API host to probe a discovery surface on.
+  Every /.well-known/ path on www.viralgains.com returns HTTP 404. Two distinct
+  404 shapes were observed: an nginx text 404 (security.txt, llms.txt) and the
+  WordPress themed 404 page (50,044 bytes of HTML) for the rest. Neither is a
+  document. No WellKnown or SecurityTxt pointer is emitted for this repo — the
+  probe records an absence, not a presence.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+  content_type: text/html
+  file: null
+- path: /.well-known/openid-configuration
+  status: 404
+  content_type: text/html
+  file: null
+- path: /.well-known/oauth-authorization-server
+  status: 404
+  content_type: text/html
+  file: null
+- path: /.well-known/api-catalog
+  status: 404
+  content_type: text/html
+  file: null
+- path: /.well-known/ai-plugin.json
+  status: 404
+  content_type: text/html
+  file: null
+- path: /.well-known/agent-card.json
+  status: 404
+  content_type: text/html
+  file: null
+- path: /.well-known/agent.json
+  status: 404
+  content_type: text/html
+  file: null
+- path: /.well-known/gpc.json
+  status: 404
+  content_type: text/html
+  file: null
+adjacent_probes:
+- path: /llms.txt
+  status: 404
+  note: nginx text 404
+- path: /openapi.json
+  status: 404
+  note: WordPress themed 404 HTML
+- path: /swagger.json
+  status: 404
+- path: /api-docs
+  status: 404
+- path: /sellers.json
+  status: 404
+  note: IAB Tech Lab sellers.json — ViralGains publishes none
+- path: /ads.txt
+  status: 200
+  note: >-
+    SOFT 200 — the WordPress catch-all returned 89,025 bytes of HTML, not an
+    IAB ads.txt record set. Treated as a miss.
+- path: /app-ads.txt
+  status: 404
+- path: /robots.txt
+  status: 200
+  note: real text/plain; Yoast-generated, disallows /wp-json/ and /?rest_route=
+- path: /sitemap.xml
+  status: 200
+  note: real Yoast XML sitemap index
+hosts_not_resolving:
+- api.viralgains.com
+- developer.viralgains.com
+- developers.viralgains.com
+- docs.viralgains.com
+- app.viralgains.com
+- platform.viralgains.com
+- dashboard.viralgains.com
+- login.viralgains.com
+- status.viralgains.com
+- trust.viralgains.com
+- support.viralgains.com
+- help.viralgains.com

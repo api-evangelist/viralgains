@@ -32,7 +32,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-08-12'
 tags:
 - Company
 - Advertising
@@ -59,8 +59,48 @@ common:
   url: https://www.viralgains.com/privacy-policy/
 - type: TermsOfService
   url: https://www.viralgains.com/terms-conditions/
+- type: Support
+  url: https://www.viralgains.com/contact-us/
+- type: GitHubOrganization
+  url: https://github.com/ViralGains
+- type: Packages
+  url: packages/viralgains-packages.yml
+- type: LLMsTxt
+  url: llms/viralgains-llms.txt
+- type: Conformance
+  url: conformance/viralgains-conformance.yml
+- type: Compliance
+  url: https://www.viralgains.com/ccpa-compliance/
+- type: Plans
+  url: plans/viralgains-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/viralgains-rate-limits.yml
 x-enrichment:
-  date: '2026-07-21'
+  date: '2026-08-12'
   status: minimal
-  artifacts_added: 1
+  artifacts_added: 6
   pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    ViralGains runs a WordPress marketing site and nothing else — api.,
+    developer., developers. and docs.viralgains.com are all NXDOMAIN, the
+    41-URL Yoast page sitemap contains no developer, API, docs or pricing page,
+    and the FAQ routes all implementation questions to 800-501-2763 and
+    hello@viralgains.com because media is activated through third-party DSPs
+    and SSPs rather than a ViralGains API.
+  evidence:
+  - url: https://api.viralgains.com/
+    status: 0
+  - url: https://www.viralgains.com/openapi.json
+    status: 404
+  - url: https://www.viralgains.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.viralgains.com/llms.txt
+    status: 404
+  - url: https://www.viralgains.com/pricing
+    status: 404
+  - url: https://www.viralgains.com/page-sitemap.xml
+    status: 200
+  checked: '2026-08-12'

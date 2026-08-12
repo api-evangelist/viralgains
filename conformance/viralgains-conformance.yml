@@ -1,0 +1,79 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  https://www.viralgains.com/ccpa-compliance/,
+  https://www.viralgains.com/privacy-policy/,
+  https://www.viralgains.com/consumer-health-data-privacy-statement/
+note: >-
+  ViralGains publishes no machine-readable API contract, so none of the usual
+  API-side standards (OAuth2, OIDC, RFC 9457, JSON:API, pagination,
+  idempotency) can be asserted or refuted from a spec — they are recorded as
+  not-applicable rather than false. What the company DOES publish is a real
+  advertising-privacy compliance posture: a dedicated CCPA compliance page,
+  stated participation in the DAA and NAI self-regulatory programs, and a
+  separate consumer health data privacy statement naming the Washington My
+  Health My Data Act and the Nevada Consumer Health Privacy Law for its VG
+  Health product. No security certification (SOC 2, ISO 27001, HIPAA,
+  FedRAMP, PCI DSS) is named anywhere on the public site, and no trust center
+  exists (trust.viralgains.com is NXDOMAIN; /trust redirects to a JPEG).
+standards:
+- id: ccpa
+  conforms: true
+  evidence: >-
+    Dedicated compliance page at /ccpa-compliance/ describing California
+    consumer rights under the California Consumer Privacy Act of 2018 and a
+    "Do Not Sell My Personal Information" mechanism.
+  source: https://www.viralgains.com/ccpa-compliance/
+- id: daa-self-regulatory-program
+  conforms: true
+  evidence: >-
+    "ViralGains ... participate in the Digital Advertising Alliance's ('DAA')
+    Self-Regulatory Program for Online Behavioral Advertising", with links to
+    the DAA opt-out portal and AppChoices.
+  source: https://www.viralgains.com/ccpa-compliance/
+- id: nai-code-of-conduct
+  conforms: true
+  evidence: >-
+    Privacy policy and CCPA page reference the Network Advertising Initiative
+    ("NAI") and its opt-out platform.
+  source: https://www.viralgains.com/privacy-policy/
+- id: wa-my-health-my-data-act
+  conforms: true
+  evidence: >-
+    Consumer Health Data Privacy Statement describes the individual-rights
+    request and appeal process under the Washington My Health My Data Act.
+  source: https://www.viralgains.com/consumer-health-data-privacy-statement/
+- id: nv-consumer-health-privacy-law
+  conforms: true
+  evidence: >-
+    Same statement names the Nevada Consumer Health Privacy Law alongside the
+    Washington act for rights requests and appeals.
+  source: https://www.viralgains.com/consumer-health-data-privacy-statement/
+- id: gdpr
+  conforms: false
+  evidence: >-
+    Not named anywhere in the privacy policy, CCPA page or health privacy
+    statement; no EU representative or DPO is published.
+- id: hipaa
+  conforms: false
+  evidence: >-
+    VG Health is a healthcare/pharma advertising product but the site makes no
+    HIPAA claim; the health surface is covered by state consumer-health
+    privacy law language instead.
+- id: soc2
+  conforms: false
+  evidence: no SOC 2 claim, report request flow, or trust center published
+- id: iso-27001
+  conforms: false
+  evidence: no ISO 27001 claim published
+- id: iab-tcf
+  conforms: false
+  evidence: >-
+    No TCF string handling, CMP, or IAB Transparency and Consent Framework
+    reference found; /sellers.json also returns 404.
+- id: oauth2
+  conforms: not-applicable
+  evidence: no published API or securityScheme to evaluate
+- id: rfc9457-problem-details
+  conforms: not-applicable
+  evidence: no published API or error contract to evaluate

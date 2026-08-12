@@ -1,0 +1,48 @@
+generated: '2026-08-12'
+method: searched
+source: >-
+  registry.npmjs.org search + package metadata; PyPI, RubyGems, crates.io,
+  NuGet, Maven Central and pkg.go.dev searched and empty
+note: >-
+  ViralGains publishes exactly one package to any public registry, and it is
+  NOT an API client. @viralgains/react-date-range is a scoped fork of the
+  open-source react-date-range calendar component, published from the npm
+  account vg-npm <devops@viralgains.com>, which confirms first-party ownership.
+  It wraps no ViralGains service, so NO `SDKs` pointer is emitted for this repo
+  — the sdk_count checks must not fire on an internal UI fork. Last release
+  2022-09-26, unchanged for nearly four years.
+packages:
+- language: javascript
+  registry: npm
+  name: "@viralgains/react-date-range"
+  url: https://www.npmjs.com/package/@viralgains/react-date-range
+  install: npm install @viralgains/react-date-range
+  official: true
+  api_client: false
+  kind: ui-component-fork
+  description: A React component for choosing dates and date ranges.
+  version: 1.2.3
+  published: '2022-09-26'
+  release_count: 28
+  maintainers:
+  - vg-npm <devops@viralgains.com>
+  note: >-
+    Fork of the community react-date-range component republished under the
+    @viralgains npm scope for internal use. No repository or homepage field is
+    set in the manifest. Not a client library for any ViralGains API.
+registries_searched:
+- registry: npm
+  result: 1 first-party package (see above)
+- registry: pypi
+  result: none — pypi.org/pypi/viralgains/json returned 404
+- registry: rubygems
+  result: none
+- registry: crates.io
+  result: none
+- registry: nuget
+  result: none
+- registry: maven-central
+  result: none
+- registry: pkg.go.dev
+  result: none
+sdk_count: 0
